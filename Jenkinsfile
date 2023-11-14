@@ -1,7 +1,7 @@
 pipeline{
     agent any 
     environment{
-        image2="Todo-app"
+        image2="todo-app"
         tag2="latest"
     }
     stages{

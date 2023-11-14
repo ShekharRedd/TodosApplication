@@ -1,6 +1,6 @@
 [
   {
     "name": "hello",
-    "imageUri": "shekhar123reddy/Todo-app:latest"
+    "imageUri": "shekhar123reddy/todo-app:latest"
   }
 ]
