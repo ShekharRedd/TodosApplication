@@ -17,6 +17,7 @@ pipeline{
             steps{
                 // echo "executing unit and integration test"
                 dir('/var/jenkins_home/workspace/build-jenkins-pipeline/'){
+                    echo "hello world"
                     sh "git checkout origin feature"
                     // sh "npm install"
                 // def testExitCode = sh(script: 'npm test', returnStatus: true)
