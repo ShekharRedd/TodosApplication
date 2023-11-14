@@ -13,6 +13,11 @@ pipeline{
             }
         }
         stage("Build the images "){
+            when{
+                expression{
+                    
+                }
+            }
             steps{
                 script{
                 echo "========executing A========"
