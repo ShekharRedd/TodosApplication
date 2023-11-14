@@ -13,23 +13,26 @@ pipeline{
             }
         }
 
-        stage("checkout feature branch"){
-            steps{
-                // echo "executing unit and integration test"
-                dir('/var/jenkins_home/workspace/build-jenkins-pipeline/'){
-                    echo "hello world"
-                    sh "git checkout origin feature"
-                    // sh "npm install"
-                // def testExitCode = sh(script: 'npm test', returnStatus: true)
-                // if (testExitCode == 0) {
-                //     echo "Tests passed. Proceeding to the next stage."
-                //             // Add further steps for deployment, etc.
-                //     } else {
-                //         error "Tests failed. Aborting pipeline."
-                //         }
-                // }
-            }
-        }
+        // stage("checkout feature branch"){
+
+
+        //     steps{
+        //         // echo "executing unit and integration test"
+        //         dir('/var/jenkins_home/workspace/build-jenkins-pipeline/'){
+        //             echo "hello world"
+        //             sh "git checkout origin feature"
+        //             // sh "npm install"
+        //         // def testExitCode = sh(script: 'npm test', returnStatus: true)
+        //         // if (testExitCode == 0) {
+        //         //     echo "Tests passed. Proceeding to the next stage."
+        //         //             // Add further steps for deployment, etc.
+        //         //     } else {
+        //         //         error "Tests failed. Aborting pipeline."
+        //         //         }
+        //         // }
+        //     }
+        // }
+
         stage("Checkout and Merge Feature Branch") {
             steps {
                 script {
@@ -75,7 +78,7 @@ pipeline{
         }
         
     }
-}
+
 
  
 
