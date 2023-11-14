@@ -1,6 +1,6 @@
 [
   {
-    "name": "image",
-    "imageUri": "shekhar123reddy/sample_game:latest"
+    "name": "Myimage",
+    "imageUri": "shekhar123reddy/todo-app:latest"
   }
 ]
