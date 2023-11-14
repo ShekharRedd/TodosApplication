@@ -9,7 +9,7 @@ pipeline{
         {
             steps
             {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ShekharRedd/TodosApplication']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ShekharRedd/TodosApplication']])
             }
         }
         stage("Build the images "){
@@ -17,7 +17,7 @@ pipeline{
                 script{
                 echo "========executing A========"
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-                sh "cd FifthReact &&  build -t ${image2}:${tag2} ."
+                sh "cd FifthReact &&  docker build -t ${image2}:${tag2} ."
                 sh 'echo $USER'
                 sh "echo $PASS | docker login -u $USER --password-stdin"
                 sh "docker tag ${image2}:${tag2} $USER/${image2}:${tag2}"
